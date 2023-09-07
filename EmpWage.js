@@ -4,6 +4,7 @@ const IS_FULL_TIME=2;
 const PART_TIME_HR=4;
 const Full_TIME_HR=8;
 const WAGE_PER_HR=20;
+const NUM_OF_WORKING_DAYS=20;
 
 let empcheck = Math.floor(Math.random()*10)%2;
 if(empcheck==IS_AbBSENT)
@@ -46,3 +47,13 @@ empcheck=Math.floor(Math.random()*10)%3;
 totalemphrs=getworkinghrs(empcheck);
 let totalempwage=emphrs*WAGE_PER_HR;
 console.log(totalempwage);
+//UC4
+let  hrs=0;
+for(let i=0;i<NUM_OF_WORKING_DAYS;i++)
+{
+    empcheck=Math.floor(Math.random()*10)%3;
+    hrs+=getworkinghrs(empcheck);
+}
+totalempwage=hrs*WAGE_PER_HR;
+console.log(totalempwage);
+//UC5
